@@ -6,23 +6,20 @@ metadata:
   name: database
   namespace: twitter
   labels:
-    app: psql
+    app: httpd
     tier: backend
     version: master
 spec:
   containers:
-  - name: psql
-    image: postgres
-    env:
-      - name: POSTGRES_PASSWORD
-        value: Password@123
+  - name: httpd
+    image: httpd
     ports:
-      - containerPort: 5432
+      - containerPort: 80
     volumeMounts:
-      - name: pgdata
-        mountPath: /var/lib/postgresql/data
+      - name: httpdata
+        mountPath: /usr/local/apache2/htdocs/
   volumes:
-  - name: pgdata
+  - name: httpdata
     hostPath:
-      path: /var/lib/postgres
+      path: /var/lib/httpd/
       type: DirectoryOrCreate
