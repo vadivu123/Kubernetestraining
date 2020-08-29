@@ -110,11 +110,13 @@ execute all playbooks in the below manner to get you loud better....
 
 1. create name space
 
-https://github.com/FourTimes/Kubernetes/blob/master/namespace/namespace.yaml
+https://github.com/vadivu123/Kubernetestraining/blob/master/namespace/namespace.yaml
+#https://github.com/FourTimes/Kubernetes/blob/master/namespace/namespace.yaml
 
 2. create pods...
 
-https://github.com/FourTimes/Kubernetes/blob/master/pod/1-singlepod.yml
+https://github.com/vadivu123/Kubernetestraining/blob/master/pod/1-singlepod.yml
+#https://github.com/FourTimes/Kubernetes/blob/master/pod/1-singlepod.yml
 
 kubectl apply -f 1-singlepod.yml
 kubectl get all -n twitter -l app=nginx
@@ -123,8 +125,8 @@ kubectl exec -it pod/webserver bash -n twitter
 
 now you need to understand that lablels will help you to create exact report and find the particular resources
 
-
-https://github.com/FourTimes/Kubernetes/blob/master/pod/2-multipods.yml
+https://github.com/vadivu123/Kubernetestraining/blob/master/pod/2-multipods.yml
+#https://github.com/FourTimes/Kubernetes/blob/master/pod/2-multipods.yml
 
 kubectl get all -n facebook -l app=httpd
 
@@ -133,8 +135,8 @@ kubectl exec -it pod/multicontainer-pods bash -n facebook
 kubectl exec -it pod/multicontainer-pods bash -n facebook -c web
 kubectl exec -it pod/multicontainer-pods bash -n facebook -c db
 
-
-https://github.com/bvijaycom/jino-kubernetes/blob/master/pod/2.1-duplicate-port-multipod.yaml
+https://github.com/vadivu123/Kubernetestraining/blob/master/pod/2.1-duplicate-port-multipod.yaml
+#https://github.com/bvijaycom/jino-kubernetes/blob/master/pod/2.1-duplicate-port-multipod.yaml
 
 kubectl apply -f 2.1-duplicate-port-multipod.yaml
 
@@ -152,7 +154,9 @@ kubectl logs pod/multicontainer-pods -n twitter -c httpd1
 
 -----------------
 kubectl create ns twitter
-https://github.com/FourTimes/Kubernetes/blob/master/pod/3-storage.yml
+
+https://github.com/vadivu123/Kubernetestraining/blob/master/pod/3-storage.ym
+#https://github.com/FourTimes/Kubernetes/blob/master/pod/3-storage.yml
 kubectl apply -f 3-storage.yml
 
 kubectl get pods -n twitter -o wide
@@ -161,26 +165,35 @@ kubectl describe pod/database -n twitter
 
 
 check the directory has been created to that node
+https://github.com/vadivu123/Kubernetestraining/blob/master/pod/4-multistorage.yml
+#https://github.com/FourTimes/Kubernetes/blob/master/pod/4-multistorage.yml
 
-https://github.com/FourTimes/Kubernetes/blob/master/pod/4-multistorage.yml
-https://github.com/FourTimes/Kubernetes/blob/master/pod/5-full.yaml
+https://github.com/vadivu123/Kubernetestraining/blob/master/pod/5-full.yaml
+#https://github.com/FourTimes/Kubernetes/blob/master/pod/5-full.yaml
 ********************************************************************************************
 find out the below yaml file is deployed to which name space
 
-https://github.com/FourTimes/Kubernetes/blob/master/pod/6-example.yml
+https://github.com/vadivu123/Kubernetestraining/blob/master/pod/6-example.yml
+#https://github.com/FourTimes/Kubernetes/blob/master/pod/6-example.yml
 
 kubectl get pod
 kubectl describe pod <pod name>
 ********************************************************************************************
 3. services
 
-https://github.com/FourTimes/Kubernetes/blob/master/service/loadbalancer-facebook.yaml
-https://github.com/FourTimes/Kubernetes/blob/master/service/loadbalancer-twiiter.yaml
+https://github.com/vadivu123/Kubernetestraining/blob/master/service/loadbalancer-facebook.yaml
+https://github.com/vadivu123/Kubernetestraining/blob/master/service/loadbalancer-twitter.yml
+
+#https://github.com/FourTimes/Kubernetes/blob/master/service/loadbalancer-facebook.yaml
+#https://github.com/FourTimes/Kubernetes/blob/master/service/loadbalancer-twiiter.yaml
 
 the above loadbalancer yaml will work only if you have the nodes in google cloud.because you will have the public ip.
 
-https://github.com/FourTimes/Kubernetes/blob/master/service/nodeport-facebook.yaml
-https://github.com/FourTimes/Kubernetes/blob/master/service/nodeport-twitter.yaml
+https://github.com/vadivu123/Kubernetestraining/blob/master/service/nodeport-facebook.yaml
+https://github.com/vadivu123/Kubernetestraining/blob/master/service/nodeport-twitter.yml
+
+#https://github.com/FourTimes/Kubernetes/blob/master/service/nodeport-facebook.yaml
+#https://github.com/FourTimes/Kubernetes/blob/master/service/nodeport-twitter.yaml
 
 kubectl get pod,services -n twitter -o wide
 
@@ -193,11 +206,17 @@ kubectl describe services
 
 4. Replica set
 
-https://github.com/FourTimes/Kubernetes/blob/master/replicaset/1-singlereplica.yml
-https://github.com/FourTimes/Kubernetes/blob/master/replicaset/2-singlepod-singlereplica.yml
-https://github.com/FourTimes/Kubernetes/blob/master/replicaset/3-multireplica.yaml
-https://github.com/FourTimes/Kubernetes/blob/master/replicaset/4-singlepod-singlereplica-error.yaml
-https://github.com/FourTimes/Kubernetes/blob/master/replicaset/5-replica-nodeport.yml
+https://github.com/vadivu123/Kubernetestraining/blob/master/replicaset/1-singlereplica.yml
+https://github.com/vadivu123/Kubernetestraining/blob/master/replicaset/2-singlepod-singlereplica.yml
+https://github.com/vadivu123/Kubernetestraining/blob/master/replicaset/3-multireplica.yaml
+https://github.com/vadivu123/Kubernetestraining/blob/master/replicaset/4-singlepod-singlereplica-error.yaml
+https://github.com/vadivu123/Kubernetestraining/blob/master/replicaset/5-replica-nodeport.yml
+
+# https://github.com/FourTimes/Kubernetes/blob/master/replicaset/1-singlereplica.yml
+# https://github.com/FourTimes/Kubernetes/blob/master/replicaset/2-singlepod-singlereplica.yml
+# https://github.com/FourTimes/Kubernetes/blob/master/replicaset/3-multireplica.yaml
+# https://github.com/FourTimes/Kubernetes/blob/master/replicaset/4-singlepod-singlereplica-error.yaml
+# https://github.com/FourTimes/Kubernetes/blob/master/replicaset/5-replica-nodeport.yml
 
 kubectl get replicas
 kubectl describe replicas
@@ -208,8 +227,11 @@ labels --> service -- selector , replica -- match ---> should be same
 
 5. Deployments
 
-https://github.com/FourTimes/Kubernetes/blob/master/deployments/1-deployment-facebook.yaml
-https://github.com/FourTimes/Kubernetes/blob/master/deployments/2-deployment-twitter.yml
+https://github.com/vadivu123/Kubernetestraining/blob/master/deployments/1-deployment-facebook.yaml
+https://github.com/vadivu123/Kubernetestraining/blob/master/deployments/2-deployment-twitter.yml
+
+# https://github.com/FourTimes/Kubernetes/blob/master/deployments/1-deployment-facebook.yaml
+# https://github.com/FourTimes/Kubernetes/blob/master/deployments/2-deployment-twitter.yml
 
 kubectl get deploy
 kubectl describe deploy
@@ -225,12 +247,14 @@ then
 run the below command again
 kubectl get pod,service,replicaset,deploy -n facebook -o wide
 
-rolling update --> https://github.com/bvijaycom/jino-kubernetes/blob/master/deployments/commands.txt
+https://github.com/vadivu123/Kubernetestraining/blob/master/deployments/commands.txt
+# rolling update --> https://github.com/bvijaycom/jino-kubernetes/blob/master/deployments/commands.txt
 
 
 6. dameonsets
 
-https://github.com/bvijaycom/jino-kubernetes/blob/master/daemonset-nginx.yaml
+https://github.com/vadivu123/Kubernetestraining/blob/master/daemonset-nginx.yaml
+# https://github.com/bvijaycom/jino-kubernetes/blob/master/daemonset-nginx.yaml
 
 kubectl get all
 
@@ -256,10 +280,14 @@ kubectl descibe daemonsets
 
 7.init containers
 
-https://github.com/bvijaycom/jino-kubernetes/blob/master/init/node-redis/node.yml
+https://github.com/vadivu123/Kubernetestraining/blob/master/init/node-redis/node.yml
+# https://github.com/bvijaycom/jino-kubernetes/blob/master/init/node-redis/node.yml
+
 first deploy this and run kubectl get all command
 you will see init is waiting.coz the dependency is not yet launched or stopped
-https://github.com/bvijaycom/jino-kubernetes/blob/master/init/node-redis/redis.yml
+
+https://github.com/vadivu123/Kubernetestraining/blob/master/init/node-redis/redis.yml
+# https://github.com/bvijaycom/jino-kubernetes/blob/master/init/node-redis/redis.yml
 
 if we deploy redis.yaml (kubectl apply -f redis.yaml then you run the kubectl get all command you will now see running state)
 
@@ -268,15 +296,18 @@ if we deploy redis.yaml (kubectl apply -f redis.yaml then you run the kubectl ge
 
 first execute 
 
-https://github.com/bvijaycom/jino-kubernetes/blob/master/ingress/nginx/deployment.yaml
+https://github.com/vadivu123/Kubernetestraining/blob/master/ingress/nginx/deployment.yaml
+# https://github.com/bvijaycom/jino-kubernetes/blob/master/ingress/nginx/deployment.yaml
 
 ingress controller and 3rd party addon will be enabled then run the HPA below
 
-
-https://github.com/bvijaycom/jino-kubernetes/blob/master/hpa/hpa.yml
+https://github.com/vadivu123/Kubernetestraining/blob/master/hpa/hpa.yml
+# https://github.com/bvijaycom/jino-kubernetes/blob/master/hpa/hpa.yml
 
 9. resource limits
-https://github.com/bvijaycom/jino-kubernetes/blob/master/hpa/hpa.yml
+
+https://github.com/vadivu123/Kubernetestraining/blob/master/hpa/hpa.yml
+# https://github.com/bvijaycom/jino-kubernetes/blob/master/hpa/hpa.yml
 
 kubectl apply -f hpa.yml
 
