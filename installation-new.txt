@@ -168,6 +168,9 @@ check the directory has been created to that node
 https://github.com/vadivu123/Kubernetestraining/blob/master/pod/4-multistorage.yml
 #https://github.com/FourTimes/Kubernetes/blob/master/pod/4-multistorage.yml
 
+kubectl exec -it pod/db bash -n facebook -c web
+kubectl exec -it pod/db bash -n facebook -c db
+
 https://github.com/vadivu123/Kubernetestraining/blob/master/pod/5-full.yaml
 #https://github.com/FourTimes/Kubernetes/blob/master/pod/5-full.yaml
 ********************************************************************************************
